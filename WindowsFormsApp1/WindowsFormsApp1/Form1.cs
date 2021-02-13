@@ -23,11 +23,19 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             Alumno miAlumno = new Alumno();
-            String miAlumnoStr;
+            String miAlumnoStr, miAlumnoNotaText;
 
             miAlumno.Nombre = aluNombre.Text;
             miAlumno.Nota = Convert.ToInt32(aluNota.Text);
-            miAlumnoStr = aluNombre.Text + " " + aluNota.Text + (miAlumno.Aprobado ? " Aprobado" : " Suspenso") + "\n";
+            if (miAlumno.Nota < 5)
+                miAlumnoNotaText = "Suspenso";
+            else if (miAlumno.Nota < 7)
+                miAlumnoNotaText = "Aprobado";
+            else if (miAlumno.Nota < 9)
+                miAlumnoNotaText = "Notable";
+            else
+                miAlumnoNotaText = "Sobresaliente";
+            miAlumnoStr = aluNombre.Text + " " + miAlumnoNotaText + "\n";
             listaAlumnos.AppendText(miAlumnoStr);
             misAlumnos.Agregar(miAlumno);
         }
