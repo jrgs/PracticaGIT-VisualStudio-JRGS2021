@@ -110,5 +110,5 @@ namespace WindowsFormsApp1
                     return (media / listaAlumnos.Count);
                 }
             }
-        }
+       
     
