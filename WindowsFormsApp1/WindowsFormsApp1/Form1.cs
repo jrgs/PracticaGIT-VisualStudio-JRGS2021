@@ -29,8 +29,10 @@ namespace WindowsFormsApp1
             miAlumno.Nota = Convert.ToInt32(aluNota.Text);
             if (miAlumno.Nota < 5)
                 miAlumnoNotaText = "Suspenso";
+            else if (miAlumno.Nota < 6)
+                miAlumnoNotaText = "Suficiente";
             else if (miAlumno.Nota < 7)
-                miAlumnoNotaText = "Aprobado";
+                miAlumnoNotaText = "Bien";
             else if (miAlumno.Nota < 9)
                 miAlumnoNotaText = "Notable";
             else
