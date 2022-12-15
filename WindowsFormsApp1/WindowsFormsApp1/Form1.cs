@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
             if (miAlumno.Nota < 5)
                 miAlumnoNotaText = "No aprobado";//!? Cambio el texto a sacar.
             else if (miAlumno.Nota < 7)
-                miAlumnoNotaText = "Aprobado";
+                miAlumnoNotaText = "Bien";
             else if (miAlumno.Nota < 9)
                 miAlumnoNotaText = "Notable";
             else
